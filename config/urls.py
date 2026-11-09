@@ -4,7 +4,9 @@ Every module mounts itself under /api/v1/<module>/. A module that is not in
 INSTALLED_APPS contributes no URLs at all — that is what "independent" means
 here: removing a module is deleting a directory and one settings line.
 """
+# pyrefly: ignore[missing-import]
 from django.urls import include, path
+# pyrefly: ignore[missing-import]
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 import core.api.schema  # noqa: F401  registers the auth schemes by import

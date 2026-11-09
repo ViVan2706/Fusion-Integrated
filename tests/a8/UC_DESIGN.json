@@ -1,0 +1,326 @@
+[
+  {
+    "test_id": "TC-UC-001",
+    "source_id": "UC-QZ-001 Main Flow",
+    "purpose": "Verify professor creates a new course-associated draft quiz with required identity and duration",
+    "preconditions": "Professor user authorized for course CS101",
+    "action_or_input": "QuizService.create_quiz(title='Quiz 1', course_code='CS101', created_by='prof1', start_time=now+1d, end_time=now+2d, duration_minutes=30)",
+    "expected_result": "Quiz created with status='DRAFT', title='Quiz 1', course_code='CS101', and total_marks=0.0",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-002",
+    "source_id": "UC-QZ-001 Alternative A1",
+    "purpose": "Verify prohibited post-activation editing of quiz definition is blocked",
+    "preconditions": "Quiz status is 'PUBLISHED' and availability has begun",
+    "action_or_input": "Professor attempts to modify quiz title, duration, and course_code of active quiz",
+    "expected_result": "ConflictError or validation error: Editing active quiz definition is prohibited",
+    "test_type": "negative"
+  },
+  {
+    "test_id": "TC-UC-003",
+    "source_id": "UC-QZ-001 Exception E1",
+    "purpose": "Verify validation failure leaves existing persisted quiz definition unchanged",
+    "preconditions": "Valid draft quiz exists",
+    "action_or_input": "Attempt to update quiz with invalid schedule (end_time earlier than start_time)",
+    "expected_result": "ValueError raised; previous persisted quiz attributes remain unaltered",
+    "test_type": "validation"
+  },
+  {
+    "test_id": "TC-UC-004",
+    "source_id": "UC-QZ-002 Main Flow",
+    "purpose": "Verify professor adds new questions with marks and options to draft quiz",
+    "preconditions": "Draft quiz exists",
+    "action_or_input": "Create Question and link via QuizQuestion with order=1, marks=2.0",
+    "expected_result": "Question linked to quiz; quiz.quiz_questions includes question with order=1 and marks=2.0",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-005",
+    "source_id": "UC-QZ-002 Alternative A1",
+    "purpose": "Verify professor edits and removes existing questions while quiz remains in draft",
+    "preconditions": "Draft quiz with 2 linked questions",
+    "action_or_input": "Remove question 2 from quiz and update question 1 marks to 4.0",
+    "expected_result": "Question 2 removed; question 1 marks updated to 4.0 in quiz question set",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-006",
+    "source_id": "UC-QZ-002 Alternative A2",
+    "purpose": "Verify attaching image-based question content where supported",
+    "preconditions": "Draft quiz",
+    "action_or_input": "Create Question with image attachment URL or metadata in question_text",
+    "expected_result": "Question created with image metadata preserved and retrievable",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-007",
+    "source_id": "UC-QZ-002 Exception E1",
+    "purpose": "Verify unsupported or invalid question data is rejected and not committed",
+    "preconditions": "Draft quiz",
+    "action_or_input": "Attempt to link question with negative default marks or invalid question type",
+    "expected_result": "Validation error raised; invalid question is not committed to quiz",
+    "test_type": "validation"
+  },
+  {
+    "test_id": "TC-UC-008",
+    "source_id": "UC-QZ-003 Main Flow",
+    "purpose": "Verify storing, searching/filtering, and reusing Question Bank content",
+    "preconditions": "QuestionBank exists for course CS101",
+    "action_or_input": "Create Question in bank, query get_question_banks(), and link bank question to new quiz",
+    "expected_result": "Question stored in bank and successfully linked into new quiz with order and marks",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-009",
+    "source_id": "UC-QZ-004 Main Flow",
+    "purpose": "Verify configuring duration, start/end boundaries, and assessment rules",
+    "preconditions": "Draft quiz",
+    "action_or_input": "QuizService.create_quiz with start_time, end_time, duration_minutes=45, description='Rules'",
+    "expected_result": "Quiz schedule and duration saved successfully",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-010",
+    "source_id": "UC-QZ-004 Exception E1",
+    "purpose": "Verify invalid schedule configuration is rejected without replacing prior configuration",
+    "preconditions": "Draft quiz with valid start and end times",
+    "action_or_input": "Attempt to update schedule where duration_minutes=-10",
+    "expected_result": "ValueError raised: duration must be > 0; prior valid duration retained",
+    "test_type": "validation"
+  },
+  {
+    "test_id": "TC-UC-011",
+    "source_id": "UC-QZ-005 Main Flow",
+    "purpose": "Verify publishing configured draft quiz transitions status to PUBLISHED",
+    "preconditions": "Draft quiz with configured schedule and questions",
+    "action_or_input": "QuizService.publish_quiz(quiz.id)",
+    "expected_result": "Quiz status transitions to 'PUBLISHED'",
+    "test_type": "lifecycle"
+  },
+  {
+    "test_id": "TC-UC-012",
+    "source_id": "UC-QZ-005 Exception E1",
+    "purpose": "Verify incomplete draft quiz (no questions or empty schedule) cannot be published",
+    "preconditions": "Draft quiz with 0 questions attached",
+    "action_or_input": "Attempt to publish quiz with 0 questions",
+    "expected_result": "Validation error or ConflictError: Quiz cannot be published without questions",
+    "test_type": "validation"
+  },
+  {
+    "test_id": "TC-UC-013",
+    "source_id": "UC-QZ-006 Main Flow",
+    "purpose": "Verify closing an active/published quiz transitions status to CLOSED",
+    "preconditions": "Quiz in PUBLISHED status",
+    "action_or_input": "transition_quiz(quiz, 'CLOSED'); quiz.save()",
+    "expected_result": "Quiz status updated to 'CLOSED'",
+    "test_type": "lifecycle"
+  },
+  {
+    "test_id": "TC-UC-014",
+    "source_id": "UC-QZ-006 Exception E1",
+    "purpose": "Verify quiz deletion is blocked when student attempts already exist",
+    "preconditions": "Quiz has existing QuizAttempt records",
+    "action_or_input": "Attempt to delete Quiz record from database or API",
+    "expected_result": "ProtectedError or ConflictError: Cannot delete quiz with associated student attempts",
+    "test_type": "negative"
+  },
+  {
+    "test_id": "TC-UC-015",
+    "source_id": "UC-QZ-007 Main Flow",
+    "purpose": "Verify student dashboard lists published/closed quizzes and displays pre-start info",
+    "preconditions": "Published quiz with 2 questions exists",
+    "action_or_input": "Call get_student_quizzes('student_1') and get_quiz_by_id(quiz.id)",
+    "expected_result": "Quiz returned with pre-start metadata (title, duration_minutes, total_marks, questions)",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-016",
+    "source_id": "UC-QZ-007 Exception E1",
+    "purpose": "Verify ineligible student is not exposed to quizzes for unenrolled courses",
+    "preconditions": "Student enrolled in CS101; quiz belongs to ME301",
+    "action_or_input": "Student requests quiz list for enrolled courses",
+    "expected_result": "Ineligible quiz ME301 is omitted from student's available quiz list",
+    "test_type": "authorization"
+  },
+  {
+    "test_id": "TC-UC-017",
+    "source_id": "UC-QZ-008 Main Flow",
+    "purpose": "Verify eligible student starts timed quiz attempt within availability window",
+    "preconditions": "Quiz in PUBLISHED status, now is between start_time and end_time",
+    "action_or_input": "QuizService.start_attempt(quiz.id, 'student_1')",
+    "expected_result": "QuizAttempt created in 'IN_PROGRESS' status with started_at recorded and empty answer slots",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-018",
+    "source_id": "UC-QZ-008 Exception E1",
+    "purpose": "Verify attempt start is blocked when current time is outside availability window",
+    "preconditions": "Quiz in PUBLISHED status, but start_time is in the future",
+    "action_or_input": "QuizService.start_attempt(quiz.id, 'student_1')",
+    "expected_result": "ValueError raised: Quiz is not currently available for attempt",
+    "test_type": "boundary"
+  },
+  {
+    "test_id": "TC-UC-019",
+    "source_id": "UC-QZ-008 Exception E2",
+    "purpose": "Verify attempt start is blocked when student has exhausted permitted attempts limit",
+    "preconditions": "Quiz configured with permitted_attempts=1; student already submitted attempt 1",
+    "action_or_input": "Student invokes start_attempt for attempt 2",
+    "expected_result": "ValueError raised: Permitted attempt limit exhausted",
+    "test_type": "negative"
+  },
+  {
+    "test_id": "TC-UC-020",
+    "source_id": "UC-QZ-008 Exception E3",
+    "purpose": "Verify pre-start background application check reports unclosed unauthorized tasks",
+    "preconditions": "Student system has disallowed background applications running",
+    "action_or_input": "Invoke pre-start environment verification check",
+    "expected_result": "System identifies unauthorized processes and blocks attempt start until resolved",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-021",
+    "source_id": "UC-QZ-009 Main Flow",
+    "purpose": "Verify student answers questions during active attempt and responses persist",
+    "preconditions": "Attempt in IN_PROGRESS status",
+    "action_or_input": "QuizService.save_answer(attempt.id, question.id, {'choice': 'OptA'})",
+    "expected_result": "StudentAnswer.submitted_answer updated to {'choice': 'OptA'} and persisted",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-022",
+    "source_id": "UC-QZ-009 Alternative A1",
+    "purpose": "Verify student can leave questions unanswered during active attempt if permitted",
+    "preconditions": "Attempt in IN_PROGRESS on quiz with 3 questions",
+    "action_or_input": "Student answers question 1 and leaves questions 2 and 3 with empty submitted_answer",
+    "expected_result": "Questions 2 and 3 remain recorded with submitted_answer={} without error",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-023",
+    "source_id": "UC-QZ-009 Alternative A2",
+    "purpose": "Verify linear navigation restriction prevents navigating back to previous questions",
+    "preconditions": "Quiz configured with allow_back_navigation=False; student answered question 1 and advanced to 2",
+    "action_or_input": "Student attempts to submit update to question 1 answer",
+    "expected_result": "HTTP 400 Bad Request: Modifying previous questions is prohibited in linear mode",
+    "test_type": "negative"
+  },
+  {
+    "test_id": "TC-UC-024",
+    "source_id": "UC-QZ-010 Main Flow",
+    "purpose": "Verify manual submission transitions attempt to evaluated and records submission timestamp",
+    "preconditions": "Attempt in IN_PROGRESS status with answers saved",
+    "action_or_input": "QuizService.submit_attempt(attempt.id, autosubmit=False)",
+    "expected_result": "Attempt status transitions to EVALUATED, submitted_at is set, and total_score computed",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-025",
+    "source_id": "UC-QZ-010 Alternative A1",
+    "purpose": "Verify student can cancel submission confirmation and resume active attempt",
+    "preconditions": "Attempt in IN_PROGRESS, student presented with submission confirmation dialog",
+    "action_or_input": "Student dismisses confirmation modal without confirming submission",
+    "expected_result": "Attempt remains in IN_PROGRESS status with timer and answer editing active",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-026",
+    "source_id": "UC-QZ-011 Main Flow",
+    "purpose": "Verify attempt is automatically submitted when configured duration expires",
+    "preconditions": "Attempt in IN_PROGRESS, current time exceeds started_at + duration_minutes",
+    "action_or_input": "QuizService.save_answer(attempt.id, question.id, {'choice': 'OptB'})",
+    "expected_result": "ValueError raised: Time expired, and attempt is automatically submitted and evaluated",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-027",
+    "source_id": "UC-QZ-012 Main Flow",
+    "purpose": "Verify automatic scoring of objective questions upon submission",
+    "preconditions": "Attempt submitted with correct answer for MCQ_SINGLE and MCQ_MULTI questions",
+    "action_or_input": "QuizService.submit_attempt(attempt.id)",
+    "expected_result": "Autograded score calculated and assigned to each answer; attempt total_score equals sum of marks",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-028",
+    "source_id": "UC-QZ-012 Alternative A1",
+    "purpose": "Verify mixed quiz with subjective questions retains pending subjective review status",
+    "preconditions": "Attempt submitted on quiz with objective and subjective (essay) questions",
+    "action_or_input": "QuizService.submit_attempt(attempt.id)",
+    "expected_result": "Attempt status set to 'SUBMITTED' or 'UNDER_REVIEW' pending professor subjective grading",
+    "test_type": "lifecycle"
+  },
+  {
+    "test_id": "TC-UC-029",
+    "source_id": "UC-QZ-013 Main Flow",
+    "purpose": "Verify AI-assisted evaluation provides suggestions and professor confirms final marks",
+    "preconditions": "Submitted attempt with subjective SHORT_ANSWER question",
+    "action_or_input": "Trigger AI evaluation for subjective answer, then professor confirms final score",
+    "expected_result": "AI provides suggested score; professor confirms and final score is updated",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-030",
+    "source_id": "UC-QZ-013 Alternative A1",
+    "purpose": "Verify professor manually grades subjective response and provides feedback",
+    "preconditions": "Submitted attempt with student answer",
+    "action_or_input": "QuizService.override_score(answer.id, override_score=Decimal('5.0'), feedback='Excellent explanation')",
+    "expected_result": "override_score=5.0 and feedback saved; attempt total_score updated",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-031",
+    "source_id": "UC-QZ-014 Main Flow",
+    "purpose": "Verify professor releases evaluated quiz results to students",
+    "preconditions": "Quiz with evaluated attempts exists",
+    "action_or_input": "QuizService.toggle_release(quiz.id, 'grades_released', True)",
+    "expected_result": "quiz.grades_released is set to True",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-032",
+    "source_id": "UC-QZ-014 Exception E1",
+    "purpose": "Verify un-evaluated quiz results cannot be released to students",
+    "preconditions": "Quiz with pending subjective submissions not yet evaluated",
+    "action_or_input": "Attempt to release grades for un-evaluated quiz",
+    "expected_result": "Validation error or ConflictError: Cannot release grades while submissions remain un-evaluated",
+    "test_type": "validation"
+  },
+  {
+    "test_id": "TC-UC-033",
+    "source_id": "UC-QZ-015 Main Flow",
+    "purpose": "Verify professor releases answer key and student views correct answers",
+    "preconditions": "Quiz with answer_key_released=True",
+    "action_or_input": "QuizService.toggle_release(quiz.id, 'answer_key_released', True)",
+    "expected_result": "quiz.answer_key_released updated to True; correct answers visible in quiz detail",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-034",
+    "source_id": "UC-QZ-015 Exception E1",
+    "purpose": "Verify student is blocked from viewing correct answers before answer key release",
+    "preconditions": "Quiz with answer_key_released=False",
+    "action_or_input": "Student queries GET /quizzing/api/quizzes/{id}/",
+    "expected_result": "Question options and text returned, but correct_answer field is masked/omitted",
+    "test_type": "security"
+  },
+  {
+    "test_id": "TC-UC-035",
+    "source_id": "UC-QZ-016 Main Flow",
+    "purpose": "Verify professor can retrieve all attempts for grading and monitoring",
+    "preconditions": "Quiz with 2 submitted attempts",
+    "action_or_input": "Call get_quiz_attempts_for_grading(quiz.id)",
+    "expected_result": "Returns list of QuizAttempt objects for the quiz prefetching answers and questions",
+    "test_type": "functional"
+  },
+  {
+    "test_id": "TC-UC-036",
+    "source_id": "UC-QZ-018 Main Flow",
+    "purpose": "Verify lifecycle transitions from DRAFT to PUBLISHED to CLOSED",
+    "preconditions": "Draft quiz exists",
+    "action_or_input": "transition_quiz(quiz, 'PUBLISHED'), then transition_quiz(quiz, 'CLOSED')",
+    "expected_result": "Quiz status transitions successfully through allowed sequence",
+    "test_type": "lifecycle"
+  }
+]
