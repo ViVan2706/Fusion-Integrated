@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="11" skipped="0" tests="37" time="3.75">
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_001" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_002" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-002 (BR-QZ-001 condition-prohibited) not satisfied in implementation">
+def test_tc_br_002():
+    """TC-BR-002 | BR-QZ-001 condition-prohibited: Verify student is blocked from accessing professor quiz-management functions"""
+>       assert False, "Requirement BR-QZ-001 condition-prohibited not satisfied"
+E       AssertionError: Specification requirement for TC-BR-002 (BR-QZ-001 condition-prohibited) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_003" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_004" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-004 (BR-QZ-002 condition-unassociated) not satisfied in implementation">
+def test_tc_br_004():
+    """TC-BR-004 | BR-QZ-002 condition-unassociated: Verify professor is blocked from managing quizzes for courses not assigned to them"""
+>       assert False, "Requirement BR-QZ-002 condition-unassociated not satisfied"
+E       AssertionError: Specification requirement for TC-BR-004 (BR-QZ-002 condition-unassociated) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_005" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_006" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-006 (BR-QZ-003 condition-ineligible) not satisfied in implementation">
+def test_tc_br_006():
+    """TC-BR-006 | BR-QZ-003 condition-ineligible: Verify ineligible student not enrolled in course is denied access to quiz"""
+>       assert False, "Requirement BR-QZ-003 condition-ineligible not satisfied"
+E       AssertionError: Specification requirement for TC-BR-006 (BR-QZ-003 condition-ineligible) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_007" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_008" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-008 (BR-QZ-004 condition-unauthorized) not satisfied in implementation">
+def test_tc_br_008():
+    """TC-BR-008 | BR-QZ-004 condition-unauthorized: Verify student cannot view or access another student's attempt data"""
+>       assert False, "Requirement BR-QZ-004 condition-unauthorized not satisfied"
+E       AssertionError: Specification requirement for TC-BR-008 (BR-QZ-004 condition-unauthorized) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_009" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_010" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-010 (BR-QZ-005 condition-postactive) not satisfied in implementation">
+def test_tc_br_010():
+    """TC-BR-010 | BR-QZ-005 condition-postactive: Verify quiz details and questions cannot be modified once quiz is active"""
+>       assert False, "Requirement BR-QZ-005 condition-postactive not satisfied"
+E       AssertionError: Specification requirement for TC-BR-010 (BR-QZ-005 condition-postactive) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_011" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_012" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_013" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_014" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_015" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_016" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-016 (BR-QZ-008 condition-exhausted) not satisfied in implementation">
+def test_tc_br_016():
+    """TC-BR-016 | BR-QZ-008 condition-exhausted: Verify starting additional attempt is blocked when permitted attempts limit is reached"""
+>       assert False, "Requirement BR-QZ-008 condition-exhausted not satisfied"
+E       AssertionError: Specification requirement for TC-BR-016 (BR-QZ-008 condition-exhausted) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_017" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_018" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-018 (BR-QZ-009 condition-randomized) not satisfied in implementation">
+def test_tc_br_018():
+    """TC-BR-018 | BR-QZ-009 condition-randomized: Verify questions are randomized when randomize_questions is configured"""
+>       assert False, "Requirement BR-QZ-009 condition-randomized not satisfied"
+E       AssertionError: Specification requirement for TC-BR-018 (BR-QZ-009 condition-randomized) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_019" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_020" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-020 (BR-QZ-010 condition-linear-restricted) not satisfied in implementation">
+def test_tc_br_020():
+    """TC-BR-020 | BR-QZ-010 condition-linear-restricted: Verify back-navigation to earlier questions is prohibited when linear mode configured"""
+>       assert False, "Requirement BR-QZ-010 condition-linear-restricted not satisfied"
+E       AssertionError: Specification requirement for TC-BR-020 (BR-QZ-010 condition-linear-restricted) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_021" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_022" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-022 (BR-QZ-011 condition-enabled) not satisfied in implementation">
+def test_tc_br_022():
+    """TC-BR-022 | BR-QZ-011 condition-enabled: Verify incorrect answer deducts configured negative marks when negative marking is enabled"""
+>       assert False, "Requirement BR-QZ-011 condition-enabled not satisfied"
+E       AssertionError: Specification requirement for TC-BR-022 (BR-QZ-011 condition-enabled) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_023" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_024" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-024 (BR-QZ-012 condition-prohibited) not satisfied in implementation">
+def test_tc_br_024():
+    """TC-BR-024 | BR-QZ-012 condition-prohibited: Verify attempt submission is blocked when unanswered questions are prohibited"""
+>       assert False, "Requirement BR-QZ-012 condition-prohibited not satisfied"
+E       AssertionError: Specification requirement for TC-BR-024 (BR-QZ-012 condition-prohibited) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_025" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_026" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_027" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_028" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_029" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_030" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_031" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_032" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_033" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_034" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_035" time="0.04" />
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_036" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-BR-036 (BR-QZ-020 condition-pass-fail) not satisfied in implementation">
+def test_tc_br_036():
+    """TC-BR-036 | BR-QZ-020 condition-pass-fail: Verify pass/fail status is determined by comparing total_score with passing_marks"""
+>       assert False, "Requirement BR-QZ-020 condition-pass-fail not satisfied"
+E       AssertionError: Specification requirement for TC-BR-036 (BR-QZ-020 condition-pass-fail) not satisfied in implementation
+
+tests/a8/br/test_br.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.br.test_br" name="test_tc_br_037" time="0.04" />
+  </testsuite>
+</testsuites>

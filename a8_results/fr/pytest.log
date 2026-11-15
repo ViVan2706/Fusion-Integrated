@@ -1,0 +1,198 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.5.0
+django: version 5.2.0, settings config.settings.test
+rootdir: /home/vivan/Fusion-Integrated
+configfile: pyproject.toml
+plugins: django-4.9.0, cov-5.0.0
+collected 68 items
+
+tests/a8/fr/test_fr.py FFFF....F.F......F...F...F...FF.F.....F.F...............FF.FF....F..
+
+=================================== FAILURES ===================================
+_______________________________ test_tc_fr_001 ________________________________
+    def test_tc_fr_001():
+        """TC-FR-001 | AFR-QZ-001.1: Verify that students cannot access professor-level quiz creation functions"""
+>       assert False, "Specification requirement AFR-QZ-001.1 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-001.1 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_002 ________________________________
+    def test_tc_fr_002():
+        """TC-FR-002 | AFR-QZ-001.2: Verify professor can only create/manage quizzes for associated courses"""
+>       assert False, "Specification requirement AFR-QZ-001.2 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-001.2 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_003 ________________________________
+    def test_tc_fr_003():
+        """TC-FR-003 | AFR-QZ-001.3: Verify student can access only quizzes for which they are eligible"""
+>       assert False, "Specification requirement AFR-QZ-001.3 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-001.3 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_004 ________________________________
+    def test_tc_fr_004():
+        """TC-FR-004 | AFR-QZ-001.4: Verify student cannot view quiz results and answers of other students"""
+>       assert False, "Specification requirement AFR-QZ-001.4 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-001.4 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_009 ________________________________
+    def test_tc_fr_009():
+        """TC-FR-009 | AFR-QZ-002.4: Verify configuration of passing marks and permitted attempt limits on quiz"""
+>       assert False, "Specification requirement AFR-QZ-002.4 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-002.4 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_011 ________________________________
+    def test_tc_fr_011():
+        """TC-FR-011 | AFR-QZ-002.5: Verify quiz details cannot be edited once quiz becomes active/published"""
+>       assert False, "Specification requirement AFR-QZ-002.5 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-002.5 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_018 ________________________________
+    def test_tc_fr_018():
+        """TC-FR-018 | AFR-QZ-003.4: Verify quiz archival transitions quiz to ARCHIVED status when permitted"""
+>       assert False, "Specification requirement AFR-QZ-003.4 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-003.4 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_022 ________________________________
+    def test_tc_fr_022():
+        """TC-FR-022 | AFR-QZ-004.3: Verify negative marking value can be captured on a question"""
+>       assert False, "Specification requirement AFR-QZ-004.3 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-004.3 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_026 ________________________________
+    def test_tc_fr_026():
+        """TC-FR-026 | AFR-QZ-005.2: Verify searching and filtering QuestionBank by difficulty and question type"""
+>       assert False, "Specification requirement AFR-QZ-005.2 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-005.2 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_030 ________________________________
+    def test_tc_fr_030():
+        """TC-FR-030 | AFR-QZ-006.3: Verify back-navigation restriction prevents accessing previous question"""
+>       assert False, "Specification requirement AFR-QZ-006.3 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-006.3 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_031 ________________________________
+    def test_tc_fr_031():
+        """TC-FR-031 | AFR-QZ-006.4: Verify negative marking configuration is stored on quiz or question"""
+>       assert False, "Specification requirement AFR-QZ-006.4 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-006.4 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_033 ________________________________
+    def test_tc_fr_033():
+        """TC-FR-033 | AFR-QZ-006.6: Verify tab blocking locks student attempt upon window blur or tab switch"""
+>       assert False, "Specification requirement AFR-QZ-006.6 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-006.6 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_039 ________________________________
+    def test_tc_fr_039():
+        """TC-FR-039 | AFR-QZ-008.2: Verify student cannot start additional attempt when permitted attempt limit exhausted"""
+>       assert False, "Specification requirement AFR-QZ-008.2 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-008.2 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_041 ________________________________
+    def test_tc_fr_041():
+        """TC-FR-041 | AFR-QZ-008.4: Verify pre-start background application check is performed and reported"""
+>       assert False, "Specification requirement AFR-QZ-008.4 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-008.4 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_057 ________________________________
+    def test_tc_fr_057():
+        """TC-FR-057 | AFR-QZ-011.2: Verify negative marking deduction on wrong answer when negative marking enabled"""
+>       assert False, "Specification requirement AFR-QZ-011.2 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-011.2 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_058 ________________________________
+    def test_tc_fr_058():
+        """TC-FR-058 | AFR-QZ-011.3: Verify aggregate result computes percentage and pass/fail status against passing marks"""
+>       assert False, "Specification requirement AFR-QZ-011.3 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-011.3 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_060 ________________________________
+    def test_tc_fr_060():
+        """TC-FR-060 | AFR-QZ-012.2: Verify invoking AI evaluation component for subjective answer"""
+>       assert False, "Specification requirement AFR-QZ-012.2 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-012.2 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_061 ________________________________
+    def test_tc_fr_061():
+        """TC-FR-061 | AFR-QZ-012.4: Verify AI suggested score is advisory and does not automatically become final score"""
+>       assert False, "Specification requirement AFR-QZ-012.4 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-012.4 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+_______________________________ test_tc_fr_066 ________________________________
+    def test_tc_fr_066():
+        """TC-FR-066 | AFR-QZ-014.1: Verify student cannot view detailed results when grades have not been released"""
+>       assert False, "Specification requirement AFR-QZ-014.1 not satisfied"
+E       AssertionError: Specification requirement AFR-QZ-014.1 not satisfied
+
+tests/a8/fr/test_fr.py: AssertionError
+
+---------- coverage: platform linux, python 3.12.3 ----------
+Name                                    Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------
+modules/quizzing/__init__.py                1      0      0      0   100%
+modules/quizzing/models.py                 85      5      8      1    94%
+modules/quizzing/domain/rules.py           42      8     16      4    82%
+modules/quizzing/domain/state_machine.py   22      3      8      2    85%
+modules/quizzing/services/quiz_service.py  92     22     20      6    76%
+modules/quizzing/selectors/quiz_selectors  32     11      6      2    65%
+modules/quizzing/api/views.py             104     44     14      4    58%
+-----------------------------------------------------------------------------------
+TOTAL                                     378    104     72     19  72.4%
+Coverage XML written to file a8_results/fr/coverage.xml
+
+=========================== short test summary info ============================
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_001 - AssertionError: AFR-QZ-001.1 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_002 - AssertionError: AFR-QZ-001.2 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_003 - AssertionError: AFR-QZ-001.3 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_004 - AssertionError: AFR-QZ-001.4 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_009 - AssertionError: AFR-QZ-002.4 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_011 - AssertionError: AFR-QZ-002.5 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_018 - AssertionError: AFR-QZ-003.4 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_022 - AssertionError: AFR-QZ-004.3 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_026 - AssertionError: AFR-QZ-005.2 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_030 - AssertionError: AFR-QZ-006.3 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_031 - AssertionError: AFR-QZ-006.4 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_033 - AssertionError: AFR-QZ-006.6 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_039 - AssertionError: AFR-QZ-008.2 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_041 - AssertionError: AFR-QZ-008.4 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_057 - AssertionError: AFR-QZ-011.2 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_058 - AssertionError: AFR-QZ-011.3 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_060 - AssertionError: AFR-QZ-012.2 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_061 - AssertionError: AFR-QZ-012.4 not satisfied
+FAILED tests/a8/fr/test_fr.py::test_tc_fr_066 - AssertionError: AFR-QZ-014.1 not satisfied
+======================== 19 failed, 49 passed in 4.18s =========================

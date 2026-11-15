@@ -1,0 +1,126 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.5.0
+django: version 5.2.0, settings config.settings.test
+rootdir: /home/vivan/Fusion-Integrated
+configfile: pyproject.toml
+plugins: django-4.9.0, cov-5.0.0
+collected 37 items
+
+tests/a8/br/test_br.py .F.F.F.F.F.....F.F.F.F.F...........F.
+
+=================================== FAILURES ===================================
+_______________________________ test_tc_br_002 ________________________________
+    def test_tc_br_002():
+        """TC-BR-002 | BR-QZ-001 condition-prohibited: Verify student is blocked from accessing professor quiz-management functions"""
+>       assert False, "Specification requirement BR-QZ-001 condition-prohibited not satisfied"
+E       AssertionError: Specification requirement BR-QZ-001 condition-prohibited not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_004 ________________________________
+    def test_tc_br_004():
+        """TC-BR-004 | BR-QZ-002 condition-unassociated: Verify professor is blocked from managing quizzes for courses not assigned to them"""
+>       assert False, "Specification requirement BR-QZ-002 condition-unassociated not satisfied"
+E       AssertionError: Specification requirement BR-QZ-002 condition-unassociated not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_006 ________________________________
+    def test_tc_br_006():
+        """TC-BR-006 | BR-QZ-003 condition-ineligible: Verify ineligible student not enrolled in course is denied access to quiz"""
+>       assert False, "Specification requirement BR-QZ-003 condition-ineligible not satisfied"
+E       AssertionError: Specification requirement BR-QZ-003 condition-ineligible not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_008 ________________________________
+    def test_tc_br_008():
+        """TC-BR-008 | BR-QZ-004 condition-unauthorized: Verify student cannot view or access another student's attempt data"""
+>       assert False, "Specification requirement BR-QZ-004 condition-unauthorized not satisfied"
+E       AssertionError: Specification requirement BR-QZ-004 condition-unauthorized not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_010 ________________________________
+    def test_tc_br_010():
+        """TC-BR-010 | BR-QZ-005 condition-postactive: Verify quiz details and questions cannot be modified once quiz is active"""
+>       assert False, "Specification requirement BR-QZ-005 condition-postactive not satisfied"
+E       AssertionError: Specification requirement BR-QZ-005 condition-postactive not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_016 ________________________________
+    def test_tc_br_016():
+        """TC-BR-016 | BR-QZ-008 condition-exhausted: Verify starting additional attempt is blocked when permitted attempts limit is reached"""
+>       assert False, "Specification requirement BR-QZ-008 condition-exhausted not satisfied"
+E       AssertionError: Specification requirement BR-QZ-008 condition-exhausted not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_018 ________________________________
+    def test_tc_br_018():
+        """TC-BR-018 | BR-QZ-009 condition-randomized: Verify questions are randomized when randomize_questions is configured"""
+>       assert False, "Specification requirement BR-QZ-009 condition-randomized not satisfied"
+E       AssertionError: Specification requirement BR-QZ-009 condition-randomized not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_020 ________________________________
+    def test_tc_br_020():
+        """TC-BR-020 | BR-QZ-010 condition-linear-restricted: Verify back-navigation to earlier questions is prohibited when linear mode configured"""
+>       assert False, "Specification requirement BR-QZ-010 condition-linear-restricted not satisfied"
+E       AssertionError: Specification requirement BR-QZ-010 condition-linear-restricted not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_022 ________________________________
+    def test_tc_br_022():
+        """TC-BR-022 | BR-QZ-011 condition-enabled: Verify incorrect answer deducts configured negative marks when negative marking is enabled"""
+>       assert False, "Specification requirement BR-QZ-011 condition-enabled not satisfied"
+E       AssertionError: Specification requirement BR-QZ-011 condition-enabled not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_024 ________________________________
+    def test_tc_br_024():
+        """TC-BR-024 | BR-QZ-012 condition-prohibited: Verify attempt submission is blocked when unanswered questions are prohibited"""
+>       assert False, "Specification requirement BR-QZ-012 condition-prohibited not satisfied"
+E       AssertionError: Specification requirement BR-QZ-012 condition-prohibited not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+_______________________________ test_tc_br_036 ________________________________
+    def test_tc_br_036():
+        """TC-BR-036 | BR-QZ-020 condition-pass-fail: Verify pass/fail status is determined by comparing total_score with passing_marks"""
+>       assert False, "Specification requirement BR-QZ-020 condition-pass-fail not satisfied"
+E       AssertionError: Specification requirement BR-QZ-020 condition-pass-fail not satisfied
+
+tests/a8/br/test_br.py: AssertionError
+
+---------- coverage: platform linux, python 3.12.3 ----------
+Name                                    Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------
+modules/quizzing/__init__.py                1      0      0      0   100%
+modules/quizzing/models.py                 85      5      8      1    94%
+modules/quizzing/domain/rules.py           42      8     16      4    82%
+modules/quizzing/domain/state_machine.py   22      3      8      2    85%
+modules/quizzing/services/quiz_service.py  92     22     20      6    76%
+modules/quizzing/selectors/quiz_selectors  32     11      6      2    65%
+modules/quizzing/api/views.py             104     44     14      4    58%
+-----------------------------------------------------------------------------------
+TOTAL                                     378    104     72     19  71.5%
+Coverage XML written to file a8_results/br/coverage.xml
+
+=========================== short test summary info ============================
+FAILED tests/a8/br/test_br.py::test_tc_br_002 - AssertionError: BR-QZ-001 condition-prohibited not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_004 - AssertionError: BR-QZ-002 condition-unassociated not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_006 - AssertionError: BR-QZ-003 condition-ineligible not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_008 - AssertionError: BR-QZ-004 condition-unauthorized not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_010 - AssertionError: BR-QZ-005 condition-postactive not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_016 - AssertionError: BR-QZ-008 condition-exhausted not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_018 - AssertionError: BR-QZ-009 condition-randomized not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_020 - AssertionError: BR-QZ-010 condition-linear-restricted not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_022 - AssertionError: BR-QZ-011 condition-enabled not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_024 - AssertionError: BR-QZ-012 condition-prohibited not satisfied
+FAILED tests/a8/br/test_br.py::test_tc_br_036 - AssertionError: BR-QZ-020 condition-pass-fail not satisfied
+======================== 11 failed, 26 passed in 3.75s =========================

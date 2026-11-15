@@ -1,0 +1,90 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.5.0
+django: version 5.2.0, settings config.settings.test
+rootdir: /home/vivan/Fusion-Integrated
+configfile: pyproject.toml
+plugins: django-4.9.0, cov-5.0.0
+collected 26 items
+
+tests/a8/wf/test_wf.py .....F.....F.FF.F.....F.F.
+
+=================================== FAILURES ===================================
+_______________________________ test_tc_wf_006 ________________________________
+    def test_tc_wf_006():
+        """TC-WF-006 | BW-QZ-03 path-archive-closed-quiz: Verify workflow path for archiving a closed quiz"""
+>       assert False, "Specification requirement BW-QZ-03 path-archive-closed-quiz not satisfied"
+E       AssertionError: Specification requirement BW-QZ-03 path-archive-closed-quiz not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+_______________________________ test_tc_wf_012 ________________________________
+    def test_tc_wf_012():
+        """TC-WF-012 | BW-QZ-06 path-unreleased-result-hidden: Verify evaluated results remain hidden from student until professor executes release"""
+>       assert False, "Specification requirement BW-QZ-06 path-unreleased-result-hidden not satisfied"
+E       AssertionError: Specification requirement BW-QZ-06 path-unreleased-result-hidden not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+_______________________________ test_tc_wf_014 ________________________________
+    def test_tc_wf_014():
+        """TC-WF-014 | BW-QZ-07 path-subjective-pending-state: Verify attempt with subjective questions transitions to UNDER_REVIEW state upon submission"""
+>       assert False, "Specification requirement BW-QZ-07 path-subjective-pending-state not satisfied"
+E       AssertionError: Specification requirement BW-QZ-07 path-subjective-pending-state not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+_______________________________ test_tc_wf_015 ________________________________
+    def test_tc_wf_015():
+        """TC-WF-015 | BW-QZ-07 path-ai-assisted-review: Verify AI-assisted evaluation workflow provides suggestions for professor confirmation"""
+>       assert False, "Specification requirement BW-QZ-07 path-ai-assisted-review not satisfied"
+E       AssertionError: Specification requirement BW-QZ-07 path-ai-assisted-review not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+_______________________________ test_tc_wf_017 ________________________________
+    def test_tc_wf_017():
+        """TC-WF-017 | BW-QZ-08 path-partial-release-guard: Verify workflow prevents grade release while subjective items in mixed quiz are un-evaluated"""
+>       assert False, "Specification requirement BW-QZ-08 path-partial-release-guard not satisfied"
+E       AssertionError: Specification requirement BW-QZ-08 path-partial-release-guard not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+_______________________________ test_tc_wf_023 ________________________________
+    def test_tc_wf_023():
+        """TC-WF-023 | CW-QZ-02 path-multi-attempt-limit-guard: Verify workflow prevents student from starting a second attempt when permitted limit is 1"""
+>       assert False, "Specification requirement CW-QZ-02 path-multi-attempt-limit-guard not satisfied"
+E       AssertionError: Specification requirement CW-QZ-02 path-multi-attempt-limit-guard not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+_______________________________ test_tc_wf_025 ________________________________
+    def test_tc_wf_025():
+        """TC-WF-025 | CW-QZ-03 path-pass-fail-threshold-determination: Verify composite workflow calculates pass/fail status against passing marks threshold"""
+>       assert False, "Specification requirement CW-QZ-03 path-pass-fail-threshold-determination not satisfied"
+E       AssertionError: Specification requirement CW-QZ-03 path-pass-fail-threshold-determination not satisfied
+
+tests/a8/wf/test_wf.py: AssertionError
+
+---------- coverage: platform linux, python 3.12.3 ----------
+Name                                    Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------
+modules/quizzing/__init__.py                1      0      0      0   100%
+modules/quizzing/models.py                 85      5      8      1    94%
+modules/quizzing/domain/rules.py           42      8     16      4    82%
+modules/quizzing/domain/state_machine.py   22      3      8      2    85%
+modules/quizzing/services/quiz_service.py  92     22     20      6    76%
+modules/quizzing/selectors/quiz_selectors  32     11      6      2    65%
+modules/quizzing/api/views.py             104     44     14      4    58%
+-----------------------------------------------------------------------------------
+TOTAL                                     378    104     72     19  68.9%
+Coverage XML written to file a8_results/wf/coverage.xml
+
+=========================== short test summary info ============================
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_006 - AssertionError: BW-QZ-03 path-archive-closed-quiz not satisfied
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_012 - AssertionError: BW-QZ-06 path-unreleased-result-hidden not satisfied
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_014 - AssertionError: BW-QZ-07 path-subjective-pending-state not satisfied
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_015 - AssertionError: BW-QZ-07 path-ai-assisted-review not satisfied
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_017 - AssertionError: BW-QZ-08 path-partial-release-guard not satisfied
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_023 - AssertionError: CW-QZ-02 path-multi-attempt-limit-guard not satisfied
+FAILED tests/a8/wf/test_wf.py::test_tc_wf_025 - AssertionError: CW-QZ-03 path-pass-fail-threshold-determination not satisfied
+======================== 7 failed, 19 passed in 2.95s =========================

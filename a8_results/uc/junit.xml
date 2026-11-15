@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="11" skipped="0" tests="36" time="3.42">
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_001" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_002" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-002 (UC-QZ-001 Alternative A1) not satisfied in implementation">
+def test_tc_uc_002():
+    """TC-UC-002 | UC-QZ-001 Alternative A1: Verify prohibited post-activation editing of quiz definition is blocked"""
+>       assert False, "Requirement UC-QZ-001 Alternative A1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-002 (UC-QZ-001 Alternative A1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_003" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_004" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_005" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_006" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_007" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-007 (UC-QZ-002 Exception E1) not satisfied in implementation">
+def test_tc_uc_007():
+    """TC-UC-007 | UC-QZ-002 Exception E1: Verify unsupported or invalid question data is rejected and not committed"""
+>       assert False, "Requirement UC-QZ-002 Exception E1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-007 (UC-QZ-002 Exception E1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_008" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_009" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_010" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_011" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_012" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-012 (UC-QZ-005 Exception E1) not satisfied in implementation">
+def test_tc_uc_012():
+    """TC-UC-012 | UC-QZ-005 Exception E1: Verify incomplete draft quiz (no questions or empty schedule) cannot be published"""
+>       assert False, "Requirement UC-QZ-005 Exception E1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-012 (UC-QZ-005 Exception E1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_013" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_014" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-014 (UC-QZ-006 Exception E1) not satisfied in implementation">
+def test_tc_uc_014():
+    """TC-UC-014 | UC-QZ-006 Exception E1: Verify quiz deletion is blocked when student attempts already exist"""
+>       assert False, "Requirement UC-QZ-006 Exception E1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-014 (UC-QZ-006 Exception E1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_015" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_016" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-016 (UC-QZ-007 Exception E1) not satisfied in implementation">
+def test_tc_uc_016():
+    """TC-UC-016 | UC-QZ-007 Exception E1: Verify ineligible student is not exposed to quizzes for unenrolled courses"""
+>       assert False, "Requirement UC-QZ-007 Exception E1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-016 (UC-QZ-007 Exception E1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_017" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_018" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_019" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-019 (UC-QZ-008 Exception E2) not satisfied in implementation">
+def test_tc_uc_019():
+    """TC-UC-019 | UC-QZ-008 Exception E2: Verify attempt start is blocked when student has exhausted permitted attempts limit"""
+>       assert False, "Requirement UC-QZ-008 Exception E2 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-019 (UC-QZ-008 Exception E2) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_020" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-020 (UC-QZ-008 Exception E3) not satisfied in implementation">
+def test_tc_uc_020():
+    """TC-UC-020 | UC-QZ-008 Exception E3: Verify pre-start background application check reports unclosed unauthorized tasks"""
+>       assert False, "Requirement UC-QZ-008 Exception E3 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-020 (UC-QZ-008 Exception E3) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_021" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_022" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_023" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-023 (UC-QZ-009 Alternative A2) not satisfied in implementation">
+def test_tc_uc_023():
+    """TC-UC-023 | UC-QZ-009 Alternative A2: Verify linear navigation restriction prevents navigating back to previous questions"""
+>       assert False, "Requirement UC-QZ-009 Alternative A2 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-023 (UC-QZ-009 Alternative A2) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_024" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_025" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_026" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_027" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_028" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-028 (UC-QZ-012 Alternative A1) not satisfied in implementation">
+def test_tc_uc_028():
+    """TC-UC-028 | UC-QZ-012 Alternative A1: Verify mixed quiz with subjective questions retains pending subjective review status"""
+>       assert False, "Requirement UC-QZ-012 Alternative A1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-028 (UC-QZ-012 Alternative A1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_029" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-029 (UC-QZ-013 Main Flow) not satisfied in implementation">
+def test_tc_uc_029():
+    """TC-UC-029 | UC-QZ-013 Main Flow: Verify AI-assisted evaluation provides suggestions and professor confirms final marks"""
+>       assert False, "Requirement UC-QZ-013 Main Flow not satisfied"
+E       AssertionError: Specification requirement for TC-UC-029 (UC-QZ-013 Main Flow) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_030" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_031" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_032" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-UC-032 (UC-QZ-014 Exception E1) not satisfied in implementation">
+def test_tc_uc_032():
+    """TC-UC-032 | UC-QZ-014 Exception E1: Verify un-evaluated quiz results cannot be released to students"""
+>       assert False, "Requirement UC-QZ-014 Exception E1 not satisfied"
+E       AssertionError: Specification requirement for TC-UC-032 (UC-QZ-014 Exception E1) not satisfied in implementation
+
+tests/a8/uc/test_uc.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_033" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_034" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_035" time="0.04" />
+    <testcase classname="tests.a8.uc.test_uc" name="test_tc_uc_036" time="0.04" />
+  </testsuite>
+</testsuites>

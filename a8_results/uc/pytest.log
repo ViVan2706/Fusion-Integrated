@@ -1,0 +1,126 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.3.2, pluggy-1.5.0
+django: version 5.2.0, settings config.settings.test
+rootdir: /home/vivan/Fusion-Integrated
+configfile: pyproject.toml
+plugins: django-4.9.0, cov-5.0.0
+collected 36 items
+
+tests/a8/uc/test_uc.py .F....F....F.F.F..FF..F....FF..F....
+
+=================================== FAILURES ===================================
+_______________________________ test_tc_uc_002 ________________________________
+    def test_tc_uc_002():
+        """TC-UC-002 | UC-QZ-001 Alternative A1: Verify prohibited post-activation editing of quiz definition is blocked"""
+>       assert False, "Specification requirement UC-QZ-001 Alternative A1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-001 Alternative A1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_007 ________________________________
+    def test_tc_uc_007():
+        """TC-UC-007 | UC-QZ-002 Exception E1: Verify unsupported or invalid question data is rejected and not committed"""
+>       assert False, "Specification requirement UC-QZ-002 Exception E1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-002 Exception E1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_012 ________________________________
+    def test_tc_uc_012():
+        """TC-UC-012 | UC-QZ-005 Exception E1: Verify incomplete draft quiz (no questions or empty schedule) cannot be published"""
+>       assert False, "Specification requirement UC-QZ-005 Exception E1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-005 Exception E1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_014 ________________________________
+    def test_tc_uc_014():
+        """TC-UC-014 | UC-QZ-006 Exception E1: Verify quiz deletion is blocked when student attempts already exist"""
+>       assert False, "Specification requirement UC-QZ-006 Exception E1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-006 Exception E1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_016 ________________________________
+    def test_tc_uc_016():
+        """TC-UC-016 | UC-QZ-007 Exception E1: Verify ineligible student is not exposed to quizzes for unenrolled courses"""
+>       assert False, "Specification requirement UC-QZ-007 Exception E1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-007 Exception E1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_019 ________________________________
+    def test_tc_uc_019():
+        """TC-UC-019 | UC-QZ-008 Exception E2: Verify attempt start is blocked when student has exhausted permitted attempts limit"""
+>       assert False, "Specification requirement UC-QZ-008 Exception E2 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-008 Exception E2 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_020 ________________________________
+    def test_tc_uc_020():
+        """TC-UC-020 | UC-QZ-008 Exception E3: Verify pre-start background application check reports unclosed unauthorized tasks"""
+>       assert False, "Specification requirement UC-QZ-008 Exception E3 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-008 Exception E3 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_023 ________________________________
+    def test_tc_uc_023():
+        """TC-UC-023 | UC-QZ-009 Alternative A2: Verify linear navigation restriction prevents navigating back to previous questions"""
+>       assert False, "Specification requirement UC-QZ-009 Alternative A2 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-009 Alternative A2 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_028 ________________________________
+    def test_tc_uc_028():
+        """TC-UC-028 | UC-QZ-012 Alternative A1: Verify mixed quiz with subjective questions retains pending subjective review status"""
+>       assert False, "Specification requirement UC-QZ-012 Alternative A1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-012 Alternative A1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_029 ________________________________
+    def test_tc_uc_029():
+        """TC-UC-029 | UC-QZ-013 Main Flow: Verify AI-assisted evaluation provides suggestions and professor confirms final marks"""
+>       assert False, "Specification requirement UC-QZ-013 Main Flow not satisfied"
+E       AssertionError: Specification requirement UC-QZ-013 Main Flow not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+_______________________________ test_tc_uc_032 ________________________________
+    def test_tc_uc_032():
+        """TC-UC-032 | UC-QZ-014 Exception E1: Verify un-evaluated quiz results cannot be released to students"""
+>       assert False, "Specification requirement UC-QZ-014 Exception E1 not satisfied"
+E       AssertionError: Specification requirement UC-QZ-014 Exception E1 not satisfied
+
+tests/a8/uc/test_uc.py: AssertionError
+
+---------- coverage: platform linux, python 3.12.3 ----------
+Name                                    Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------------
+modules/quizzing/__init__.py                1      0      0      0   100%
+modules/quizzing/models.py                 85      5      8      1    94%
+modules/quizzing/domain/rules.py           42      8     16      4    82%
+modules/quizzing/domain/state_machine.py   22      3      8      2    85%
+modules/quizzing/services/quiz_service.py  92     22     20      6    76%
+modules/quizzing/selectors/quiz_selectors  32     11      6      2    65%
+modules/quizzing/api/views.py             104     44     14      4    58%
+-----------------------------------------------------------------------------------
+TOTAL                                     378    104     72     19  69.8%
+Coverage XML written to file a8_results/uc/coverage.xml
+
+=========================== short test summary info ============================
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_002 - AssertionError: UC-QZ-001 Alternative A1 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_007 - AssertionError: UC-QZ-002 Exception E1 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_012 - AssertionError: UC-QZ-005 Exception E1 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_014 - AssertionError: UC-QZ-006 Exception E1 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_016 - AssertionError: UC-QZ-007 Exception E1 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_019 - AssertionError: UC-QZ-008 Exception E2 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_020 - AssertionError: UC-QZ-008 Exception E3 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_023 - AssertionError: UC-QZ-009 Alternative A2 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_028 - AssertionError: UC-QZ-012 Alternative A1 not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_029 - AssertionError: UC-QZ-013 Main Flow not satisfied
+FAILED tests/a8/uc/test_uc.py::test_tc_uc_032 - AssertionError: UC-QZ-014 Exception E1 not satisfied
+======================== 11 failed, 25 passed in 3.42s =========================

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="7" skipped="0" tests="26" time="2.95">
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_001" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_002" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_003" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_004" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_005" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_006" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-006 (BW-QZ-03 path-archive-closed-quiz) not satisfied in implementation">
+def test_tc_wf_006():
+    """TC-WF-006 | BW-QZ-03 path-archive-closed-quiz: Verify workflow path for archiving a closed quiz"""
+>       assert False, "Requirement BW-QZ-03 path-archive-closed-quiz not satisfied"
+E       AssertionError: Specification requirement for TC-WF-006 (BW-QZ-03 path-archive-closed-quiz) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_007" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_008" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_009" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_010" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_011" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_012" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-012 (BW-QZ-06 path-unreleased-result-hidden) not satisfied in implementation">
+def test_tc_wf_012():
+    """TC-WF-012 | BW-QZ-06 path-unreleased-result-hidden: Verify evaluated results remain hidden from student until professor executes release"""
+>       assert False, "Requirement BW-QZ-06 path-unreleased-result-hidden not satisfied"
+E       AssertionError: Specification requirement for TC-WF-012 (BW-QZ-06 path-unreleased-result-hidden) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_013" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_014" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-014 (BW-QZ-07 path-subjective-pending-state) not satisfied in implementation">
+def test_tc_wf_014():
+    """TC-WF-014 | BW-QZ-07 path-subjective-pending-state: Verify attempt with subjective questions transitions to UNDER_REVIEW state upon submission"""
+>       assert False, "Requirement BW-QZ-07 path-subjective-pending-state not satisfied"
+E       AssertionError: Specification requirement for TC-WF-014 (BW-QZ-07 path-subjective-pending-state) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_015" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-015 (BW-QZ-07 path-ai-assisted-review) not satisfied in implementation">
+def test_tc_wf_015():
+    """TC-WF-015 | BW-QZ-07 path-ai-assisted-review: Verify AI-assisted evaluation workflow provides suggestions for professor confirmation"""
+>       assert False, "Requirement BW-QZ-07 path-ai-assisted-review not satisfied"
+E       AssertionError: Specification requirement for TC-WF-015 (BW-QZ-07 path-ai-assisted-review) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_016" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_017" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-017 (BW-QZ-08 path-partial-release-guard) not satisfied in implementation">
+def test_tc_wf_017():
+    """TC-WF-017 | BW-QZ-08 path-partial-release-guard: Verify workflow prevents grade release while subjective items in mixed quiz are un-evaluated"""
+>       assert False, "Requirement BW-QZ-08 path-partial-release-guard not satisfied"
+E       AssertionError: Specification requirement for TC-WF-017 (BW-QZ-08 path-partial-release-guard) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_018" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_019" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_020" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_021" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_022" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_023" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-023 (CW-QZ-02 path-multi-attempt-limit-guard) not satisfied in implementation">
+def test_tc_wf_023():
+    """TC-WF-023 | CW-QZ-02 path-multi-attempt-limit-guard: Verify workflow prevents student from starting a second attempt when permitted limit is 1"""
+>       assert False, "Requirement CW-QZ-02 path-multi-attempt-limit-guard not satisfied"
+E       AssertionError: Specification requirement for TC-WF-023 (CW-QZ-02 path-multi-attempt-limit-guard) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_024" time="0.04" />
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_025" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-WF-025 (CW-QZ-03 path-pass-fail-threshold-determination) not satisfied in implementation">
+def test_tc_wf_025():
+    """TC-WF-025 | CW-QZ-03 path-pass-fail-threshold-determination: Verify composite workflow calculates pass/fail status against passing marks threshold"""
+>       assert False, "Requirement CW-QZ-03 path-pass-fail-threshold-determination not satisfied"
+E       AssertionError: Specification requirement for TC-WF-025 (CW-QZ-03 path-pass-fail-threshold-determination) not satisfied in implementation
+
+tests/a8/wf/test_wf.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.wf.test_wf" name="test_tc_wf_026" time="0.04" />
+  </testsuite>
+</testsuites>

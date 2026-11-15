@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite name="pytest" errors="0" failures="19" skipped="0" tests="68" time="4.18">
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_001" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-001 (AFR-QZ-001.1) not satisfied in implementation">
+def test_tc_fr_001():
+    """TC-FR-001 | AFR-QZ-001.1: Verify that students cannot access professor-level quiz creation functions"""
+>       assert False, "Requirement AFR-QZ-001.1 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-001 (AFR-QZ-001.1) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_002" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-002 (AFR-QZ-001.2) not satisfied in implementation">
+def test_tc_fr_002():
+    """TC-FR-002 | AFR-QZ-001.2: Verify professor can only create/manage quizzes for associated courses"""
+>       assert False, "Requirement AFR-QZ-001.2 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-002 (AFR-QZ-001.2) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_003" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-003 (AFR-QZ-001.3) not satisfied in implementation">
+def test_tc_fr_003():
+    """TC-FR-003 | AFR-QZ-001.3: Verify student can access only quizzes for which they are eligible"""
+>       assert False, "Requirement AFR-QZ-001.3 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-003 (AFR-QZ-001.3) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_004" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-004 (AFR-QZ-001.4) not satisfied in implementation">
+def test_tc_fr_004():
+    """TC-FR-004 | AFR-QZ-001.4: Verify student cannot view quiz results and answers of other students"""
+>       assert False, "Requirement AFR-QZ-001.4 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-004 (AFR-QZ-001.4) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_005" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_006" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_007" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_008" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_009" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-009 (AFR-QZ-002.4) not satisfied in implementation">
+def test_tc_fr_009():
+    """TC-FR-009 | AFR-QZ-002.4: Verify configuration of passing marks and permitted attempt limits on quiz"""
+>       assert False, "Requirement AFR-QZ-002.4 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-009 (AFR-QZ-002.4) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_010" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_011" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-011 (AFR-QZ-002.5) not satisfied in implementation">
+def test_tc_fr_011():
+    """TC-FR-011 | AFR-QZ-002.5: Verify quiz details cannot be edited once quiz becomes active/published"""
+>       assert False, "Requirement AFR-QZ-002.5 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-011 (AFR-QZ-002.5) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_012" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_013" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_014" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_015" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_016" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_017" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_018" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-018 (AFR-QZ-003.4) not satisfied in implementation">
+def test_tc_fr_018():
+    """TC-FR-018 | AFR-QZ-003.4: Verify quiz archival transitions quiz to ARCHIVED status when permitted"""
+>       assert False, "Requirement AFR-QZ-003.4 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-018 (AFR-QZ-003.4) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_019" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_020" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_021" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_022" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-022 (AFR-QZ-004.3) not satisfied in implementation">
+def test_tc_fr_022():
+    """TC-FR-022 | AFR-QZ-004.3: Verify negative marking value can be captured on a question"""
+>       assert False, "Requirement AFR-QZ-004.3 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-022 (AFR-QZ-004.3) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_023" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_024" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_025" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_026" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-026 (AFR-QZ-005.2) not satisfied in implementation">
+def test_tc_fr_026():
+    """TC-FR-026 | AFR-QZ-005.2: Verify searching and filtering QuestionBank by difficulty and question type"""
+>       assert False, "Requirement AFR-QZ-005.2 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-026 (AFR-QZ-005.2) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_027" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_028" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_029" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_030" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-030 (AFR-QZ-006.3) not satisfied in implementation">
+def test_tc_fr_030():
+    """TC-FR-030 | AFR-QZ-006.3: Verify back-navigation restriction prevents accessing previous question"""
+>       assert False, "Requirement AFR-QZ-006.3 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-030 (AFR-QZ-006.3) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_031" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-031 (AFR-QZ-006.4) not satisfied in implementation">
+def test_tc_fr_031():
+    """TC-FR-031 | AFR-QZ-006.4: Verify negative marking configuration is stored on quiz or question"""
+>       assert False, "Requirement AFR-QZ-006.4 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-031 (AFR-QZ-006.4) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_032" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_033" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-033 (AFR-QZ-006.6) not satisfied in implementation">
+def test_tc_fr_033():
+    """TC-FR-033 | AFR-QZ-006.6: Verify tab blocking locks student attempt upon window blur or tab switch"""
+>       assert False, "Requirement AFR-QZ-006.6 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-033 (AFR-QZ-006.6) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_034" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_035" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_036" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_037" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_038" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_039" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-039 (AFR-QZ-008.2) not satisfied in implementation">
+def test_tc_fr_039():
+    """TC-FR-039 | AFR-QZ-008.2: Verify student cannot start additional attempt when permitted attempt limit exhausted"""
+>       assert False, "Requirement AFR-QZ-008.2 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-039 (AFR-QZ-008.2) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_040" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_041" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-041 (AFR-QZ-008.4) not satisfied in implementation">
+def test_tc_fr_041():
+    """TC-FR-041 | AFR-QZ-008.4: Verify pre-start background application check is performed and reported"""
+>       assert False, "Requirement AFR-QZ-008.4 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-041 (AFR-QZ-008.4) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_042" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_043" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_044" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_045" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_046" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_047" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_048" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_049" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_050" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_051" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_052" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_053" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_054" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_055" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_056" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_057" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-057 (AFR-QZ-011.2) not satisfied in implementation">
+def test_tc_fr_057():
+    """TC-FR-057 | AFR-QZ-011.2: Verify negative marking deduction on wrong answer when negative marking enabled"""
+>       assert False, "Requirement AFR-QZ-011.2 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-057 (AFR-QZ-011.2) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_058" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-058 (AFR-QZ-011.3) not satisfied in implementation">
+def test_tc_fr_058():
+    """TC-FR-058 | AFR-QZ-011.3: Verify aggregate result computes percentage and pass/fail status against passing marks"""
+>       assert False, "Requirement AFR-QZ-011.3 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-058 (AFR-QZ-011.3) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_059" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_060" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-060 (AFR-QZ-012.2) not satisfied in implementation">
+def test_tc_fr_060():
+    """TC-FR-060 | AFR-QZ-012.2: Verify invoking AI evaluation component for subjective answer"""
+>       assert False, "Requirement AFR-QZ-012.2 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-060 (AFR-QZ-012.2) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_061" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-061 (AFR-QZ-012.4) not satisfied in implementation">
+def test_tc_fr_061():
+    """TC-FR-061 | AFR-QZ-012.4: Verify AI suggested score is advisory and does not automatically become final score"""
+>       assert False, "Requirement AFR-QZ-012.4 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-061 (AFR-QZ-012.4) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_062" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_063" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_064" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_065" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_066" time="0.04">
+      <failure message="AssertionError: Specification requirement for TC-FR-066 (AFR-QZ-014.1) not satisfied in implementation">
+def test_tc_fr_066():
+    """TC-FR-066 | AFR-QZ-014.1: Verify student cannot view detailed results when grades have not been released"""
+>       assert False, "Requirement AFR-QZ-014.1 not satisfied"
+E       AssertionError: Specification requirement for TC-FR-066 (AFR-QZ-014.1) not satisfied in implementation
+
+tests/a8/fr/test_fr.py: AssertionError
+      </failure>
+    </testcase>
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_067" time="0.04" />
+    <testcase classname="tests.a8.fr.test_fr" name="test_tc_fr_068" time="0.04" />
+  </testsuite>
+</testsuites>
